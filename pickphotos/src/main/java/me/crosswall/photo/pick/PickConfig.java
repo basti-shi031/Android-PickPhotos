@@ -72,7 +72,7 @@ public class PickConfig {
         context.startActivityForResult(intent,PICK_REQUEST_CODE);
     }
 
-
+    //建造者模式
     public static class Builder{
 
         private Activity context;
@@ -90,6 +90,7 @@ public class PickConfig {
             this.context = context;
         }
 
+        //每行数量
         public PickConfig.Builder spanCount(int spanCount){
             this.spanCount = spanCount;
             if(this.spanCount==0){
@@ -98,6 +99,7 @@ public class PickConfig {
             return this;
         }
 
+        //多选、单选
         public PickConfig.Builder pickMode(int pickMode){
             this.pickMode = pickMode;
             if(this.pickMode==0){
@@ -106,6 +108,7 @@ public class PickConfig {
             return this;
         }
 
+        //单选
         public PickConfig.Builder maxPickSize(int maxPickSize){
             this.maxPickSize = maxPickSize;
             if(this.maxPickSize==0){
@@ -114,6 +117,7 @@ public class PickConfig {
             return this;
         }
 
+        //单选模式
         public PickConfig.Builder toolbarColor(@ColorRes int toolbarColor){
             this.toolbarColor = toolbarColor;
             if(this.toolbarColor==0){
