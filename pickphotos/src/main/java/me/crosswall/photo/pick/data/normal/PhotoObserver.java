@@ -15,6 +15,13 @@ import rx.schedulers.Schedulers;
  */
 public class PhotoObserver {
 
+    /*
+    * 获取照片
+    *
+    * subscribeOn(Schedulers.newThread())，使得获取图片在新线程中进行，
+    * observeOn(AndroidSchedulers.mainThread())使得显示在主线程中进行
+    *
+    * */
     public static Observable<List<PhotoDirectory>> getPhotos(final Context context,final boolean checkImage,final boolean showGif){
         return Observable.create(new Observable.OnSubscribe<List<PhotoDirectory>>() {
             @Override

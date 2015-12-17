@@ -73,6 +73,7 @@ public class PickPhotosActiviy extends AppCompatActivity implements PhotoView {
 
     }
 
+    //初始化配置数据
     private void initData() {
         bundle = getIntent().getBundleExtra(PickConfig.EXTRA_PICK_BUNDLE);
         spanCount = bundle.getInt(PickConfig.EXTRA_SPAN_COUNT,PickConfig.DEFAULT_SPANCOUNT);
@@ -82,6 +83,7 @@ public class PickPhotosActiviy extends AppCompatActivity implements PhotoView {
         useCursorLoader = bundle.getBoolean(PickConfig.EXTRA_CURSOR_LOADER,PickConfig.DEFALUT_USE_CURSORLOADER);
     }
 
+    //绑定控件
     private void initView() {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
